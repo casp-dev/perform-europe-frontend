@@ -86,7 +86,12 @@ $('#btn-w-close').on('click', function () {
 $('.check-box').on('click', function () {
     $(this).toggleClass('is--checked');
 });
-
+$('#open-video').on('click', function () {
+    $('.video__embed-wrp').addClass('open');
+});
+$('#close-video').on('click', function () {
+    $('.video__embed-wrp').removeClass('open');
+});
 
 
 
