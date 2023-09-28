@@ -122,6 +122,7 @@ transition-duration: 0ms;
 
 
 
+
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -2299,6 +2300,7 @@ a {
 }
 
 .section-wrp.s-card {
+  z-index: 12;
   justify-content: center;
   align-items: flex-start;
   margin-top: -1.5rem;
@@ -4381,6 +4383,10 @@ a {
   max-width: 30rem;
 }
 
+.landing__image--mobile {
+  display: none;
+}
+
 .max-widht-24rem {
   max-width: 24rem;
 }
@@ -5777,10 +5783,19 @@ a {
   right: 0%;
 }
 
-.landing-animation {
+.landing-img-wrp {
   width: 90%;
   height: 100%;
   justify-content: center;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+.l__itm__titles {
+  width: 20rem;
+  height: 2.5rem;
+  flex-direction: column;
   align-items: center;
   display: flex;
   position: relative;
@@ -6397,6 +6412,77 @@ a {
   width: 25rem;
 }
 
+.l__img {
+  position: absolute;
+  top: 0%;
+  bottom: auto;
+  left: auto;
+  right: 0%;
+}
+
+.l__img.top-right {
+  z-index: 1;
+  width: 18vw;
+  top: 7rem;
+  bottom: auto;
+  left: auto;
+  right: 0%;
+}
+
+.l__img.bottom-right {
+  width: 33vw;
+  top: auto;
+  bottom: 2rem;
+  left: auto;
+  right: -1.5rem;
+}
+
+.l__img.bottom-left {
+  height: 11vw;
+  top: auto;
+  bottom: 3rem;
+  left: -1rem;
+  right: auto;
+}
+
+.l__img.bottom-mid {
+  height: 10vw;
+  top: auto;
+  bottom: 6vw;
+  left: 25vw;
+  right: auto;
+}
+
+.l__img.top-mid {
+  height: 8vw;
+  top: 9rem;
+  bottom: auto;
+  left: 20vw;
+  right: auto;
+}
+
+.l__img.top-mid-right {
+  z-index: 1;
+  height: 9vw;
+  top: 5rem;
+  bottom: auto;
+  left: auto;
+  right: 22vw;
+}
+
+.l__title {
+  color: #f0f;
+  letter-spacing: -.125rem;
+  font-size: 2.5rem;
+}
+
+.l__title-wrp {
+  height: 2.5rem;
+  min-height: 2.5rem;
+  position: absolute;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 991px) {
   .section-wrp.s-selected {
     padding-left: 1.5rem;
@@ -6496,6 +6582,17 @@ a {
 
   .search__results__cta-wrp {
     padding-left: 0;
+  }
+
+  .landing__image--mobile {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+  .landing__image {
+    height: 100%;
+    object-fit: cover;
   }
 
   .menu__link__line {
@@ -6626,6 +6723,10 @@ a {
   .slider {
     grid-row-gap: 1.5rem;
     flex-direction: column;
+  }
+
+  .landing-img-wrp {
+    display: none;
   }
 
   .slider__txt.show-mobile {
@@ -7164,6 +7265,10 @@ a {
 
   .slider__title {
     font-size: 1.25rem;
+  }
+
+  .landing-img-wrp {
+    display: none;
   }
 
   .btn-large--warning._50 {
