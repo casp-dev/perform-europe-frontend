@@ -2541,6 +2541,8 @@ a {
 }
 
 .navbar-block {
+  position: relative;
+  overflow: hidden;
   letter-spacing: -.1rem;
   font-size: 2rem;
   line-height: 100%;
@@ -2569,6 +2571,13 @@ a {
 
 .txt-link.txt-white:hover {
   opacity: 1;
+}
+.txt-link.txt-white.is-2 {
+  position: absolute;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: auto;
 }
 
 .txt-link.txt-up.txt-black {
