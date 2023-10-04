@@ -104,6 +104,10 @@ $('#close-video').on('click', function () {
     location.reload();
 });
 
+$('.form__itm-i').on('click', function () {
+    $(this).addClass('f-interactive');
+    $(this).find('.form__txt-i').addClass('f-interactive');
+});
 
 
 $('.navbar-wrp').css('background-image', 'none');

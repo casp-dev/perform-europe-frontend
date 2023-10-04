@@ -32,6 +32,15 @@
   transform: rotate(0deg);
 }
 
+.swiper-slide.swiper-slide-visible.swiper-slide-active .txt--4rem.txt-up._w-700 {
+  opacity: 1;
+}
+.swiper-slide .txt--4rem.txt-up._w-700 {
+  opacity: 0;
+  transition: all .2s;
+}
+
+
 .btn--match:hover .quickmatch__icon {
   filter: brightness(20000%);
 }
@@ -107,6 +116,28 @@ transition-duration: 0ms;
   background-color: var(--mint-color);
   letter-spacing: -.1rem;
   cursor: pointer;
+}
+.form__txt-i.f-interactive {
+  top: 0%;
+  left: 0.5%;
+  bottom: auto;
+  transform: scale(.5);
+}
+.form__txt-i {
+  transform-origin: 0 0;
+  position: absolute;
+  top: auto;
+  bottom: 10%;
+  left: 0%;
+  right: auto;
+  pointer-events: none;
+  transition: all .2s;
+
+}
+.form__itm-i.f-interactive {
+  padding-top: 0.8rem;
+  margin-top: .5rem;
+  height: 3rem;
 }
 .searchbar__txt {
   width: 100%;
@@ -5203,6 +5234,21 @@ a {
   position: relative;
 }
 
+.form__itm-i {
+  height: 2.5rem;
+  color: rgba(0, 0, 0, .5);
+  letter-spacing: -.1rem;
+  white-space: nowrap;
+  cursor: text;
+  border-bottom: 1px solid #000;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 2rem;
+  transition: all .2s;
+  display: flex;
+  position: relative;
+}
+
 .form__itm:hover {
   color: #000;
 }
@@ -7333,6 +7379,10 @@ color: var(--magenta-color);
   }
 
   .form__itm {
+    font-size: 1.5rem;
+  }
+
+  .form__itm-i {
     font-size: 1.5rem;
   }
 
@@ -13756,20 +13806,7 @@ a {
   color: #f0f;
 }
 
-.form__itm {
-  height: 2.5rem;
-  color: rgba(0, 0, 0, .5);
-  letter-spacing: -.1rem;
-  white-space: nowrap;
-  cursor: text;
-  border-bottom: 1px solid #000;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-size: 2rem;
-  transition: color .2s;
-  display: flex;
-  position: relative;
-}
+
 
 .form__itm:hover {
   color: #000;
@@ -15895,9 +15932,7 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .form__itm {
-    font-size: 1.5rem;
-  }
+ 
 
   .form__txt {
     font-size: 1.5rem;
@@ -16540,7 +16575,7 @@ a {
     margin-top: 3rem;
   }
 
-  .form__itm {
+  .form__itm-i {
     padding-right: .5rem;
   }
 
