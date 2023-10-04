@@ -490,4 +490,26 @@ width: 50vw;
     .swiper-carousel .swiper-button-prev {
         display: none !important;
     }
+    .swiper-carousel .swiper-slide {
+        width: 70vw;
+        }
+        .swiper-carousel .txt--4rem {
+            letter-spacing: -.05rem;
+            font-size: 8.5vw;
+            white-space: nowrap;
+        }
+
+        .project__itm-wrp {
+            height: 15rem;
+            }
+
+            .project__itm-wrp {
+                height: 15rem;
+                }
+
+            #app {
+                height: 100vw;
+                margin-left: -1.5rem;
+                margin-right: -1.5rem;}
+
 }
