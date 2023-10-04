@@ -47,6 +47,8 @@ $(".filter-menu__open").on('click', function (e) {
     e.preventDefault();
     if ($(window).width() > 768) {
         $(".fixed__filter-menu").addClass('open');
+        $(".fixed__filter-menu").removeClass('shrinked');
+        $('.filter-menu--extra__txt').css('display', 'inline');
 $(this).css('display', 'none');
 $('.filter-itm__order').css('opacity', '1');
 $('.fixed__cta__txt__close').css('display', 'block');
@@ -60,18 +62,22 @@ $('.fixed__cta__txt__close').css('display', 'block');
 $('.navbar-wrp--difference').css('display', 'none');
 $('.filter-menu__arrow').css('transform', 'rotate(30deg)');
 $('.btn-reset').css('opacity', '1');
+$('.filter-menu--extra__txt').css('display', 'inline');
     }
 });
 
 $('.filter-menu__arrow').on('click', function () {
-$(".fixed__filter-menu").removeClass('open');
+    $(".fixed__filter-menu").removeClass('open');
 $('.filter-itm__order').css('opacity', '0');
 $('.filter-menu__open').css('display', 'block');
 $(this).css('transform', 'rotate(-30deg)');
 $('.navbar-wrp--difference').css('display', 'flex');
 $('.fixed__cta__txt__close').css('display', 'none');
 $('.btn-reset').css('opacity', '0');
+$('.filter-menu--extra__txt').css('display', 'inline');
 });
+
+
 $('.fixed__cta__txt__close').on('click', function () {
 $(".fixed__filter-menu").removeClass('open');
 $('.filter-itm__order').css('opacity', '0');
@@ -80,7 +86,10 @@ $(this).css('display', 'none');
 $('.navbar-wrp--difference').css('display', 'flex');
 $('.filter-menu__arrow').css('transform', 'rotate(-30deg)');
 $('.btn-reset').css('opacity', '0');
+$('.filter-menu--extra__txt').css('display', 'inline');
 });
+
+
 $('#btn-w-open').on('click', function () {
     $('.action-warning').addClass('open');
 });
@@ -247,6 +256,35 @@ $(".landing-img-wrp").each(function (index) {
      $(this).on("mouseleave", function () {
        tl.reverse();
      });
+  });
+
+
+
+
+
+  $(".fixed__filter-menu").each(function (index) { 
+    $(document).ready(function() {
+    if ($(window).width() > 768) {
+    // Function to add class when scrolled down 50vh
+    function addClassOnScroll() {
+        var scrollPosition = $(window).scrollTop();
+        var windowHeight = $(window).height();
+
+        // Check if the element does not have the class "open"
+        if (!$('.fixed__filter-menu').hasClass('open')) {
+            if (scrollPosition >= (0.5 * windowHeight)) {
+                $('.fixed__filter-menu').addClass('shrinked');
+                $('.filter-menu--extra__txt').css('display', 'none');
+            } else {
+                $('.fixed__filter-menu').removeClass('shrinked');
+                $('.filter-menu--extra__txt').css('display', 'inline');
+            }
+        }
+    }
+
+    // Attach the scroll event listener
+    $(window).on('scroll', addClassOnScroll);
+}});
   });
 
 

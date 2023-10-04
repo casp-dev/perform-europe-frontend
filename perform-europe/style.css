@@ -27,6 +27,12 @@
 }
 
 
+.fixed__filter-menu.shrinked {
+  width: 16.5rem;
+  top: 5rem;
+  height: 5rem;
+  padding-top: 1.5rem;
+}
 
 .p__slider__itm:hover .p__slider__icon {
   transform: rotate(0deg);
@@ -4832,6 +4838,7 @@ a {
 }
 
 .filter-menu__head {
+  white-space: nowrap;
   grid-column-gap: 1rem;
   align-items: center;
   display: flex;
