@@ -14,14 +14,27 @@
   display: block;
   height: 1px;
 }
-
 /*track*/
 .itms__grid::-webkit-scrollbar-track {
   background:rgba(255, 255, 255, 0.5);
 }
-
 /*thumb*/
 .itms__grid::-webkit-scrollbar-thumb {
+  background:rgb(255, 255, 255);
+  border-style:solid;
+}
+
+/*width*/
+.productions__slider::-webkit-scrollbar {
+  display: block;
+  height: 1px;
+}
+/*track*/
+.productions__slider::-webkit-scrollbar-track {
+  background:rgba(255, 255, 255, 0.5);
+}
+/*thumb*/
+.productions__slider::-webkit-scrollbar-thumb {
   background:rgb(255, 255, 255);
   border-style:solid;
 }
@@ -2542,8 +2555,13 @@ a {
   overflow: visible;
 }
 
-.section-wrp.s-project-productions, .section-wrp.s-project-dates, .section-wrp.s-news {
+.section-wrp.s-project-dates, .section-wrp.s-news {
   padding: 1.5rem 1.5rem 6rem;
+}
+.section-wrp.s-project-productions {
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 6rem;
 }
 
 .section-wrp.s-about-land {
@@ -3744,11 +3762,15 @@ a {
 
 .productions__slider {
   align-items: stretch;
+  padding-right: 1.5rem;
+  padding-bottom: 2rem;
   display: flex;
+  overflow: auto;
 }
 
 .pro__slider__itm {
-  width: 25%;
+  width: 25vw;
+  min-width: 25vw;
   grid-column-gap: 1.5rem;
   justify-content: space-between;
   display: flex;
