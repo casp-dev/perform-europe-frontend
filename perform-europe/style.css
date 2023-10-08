@@ -7141,6 +7141,9 @@ color: var(--magenta-color);
   .btn--declined {
     width: 100%;
   }
+  .side-menu--mobile {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -7715,6 +7718,71 @@ color: var(--magenta-color);
 
   .credits-wrp {
     width: 100%;
+  }
+
+  .side-menu--mobile {
+    background-color: #feccfa;
+    border-radius: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    display: flex;
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .menu__dots {
+    grid-column-gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+  }
+
+  .menu__dot {
+    width: .5rem;
+    height: .5rem;
+    background-color: #000;
+    border-radius: 2rem;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+
+  .menu__dot--big {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #000;
+    border: 3px solid #feccfa;
+    border-radius: 2rem;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+
+  .menu__dot--big.current {
+    width: 2rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+
+  .menu__titles {
+    width: 90%;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-left: 11%;
+    display: flex;
+    position: relative;
+  }
+
+  .menu__title {
+    color: #000;
+    text-transform: uppercase;
+    font-size: .825rem;
+    line-height: 100%;
   }
 }
 
@@ -8363,6 +8431,45 @@ color: var(--magenta-color);
   .find-partners__tab-wrp {
     grid-column-gap: 2rem;
     grid-template-columns: 1fr;
+  }
+  
+  .side-menu--mobile {
+    height: 3.2rem;
+    border-radius: .8rem;
+    padding-right: 1vw;
+  }
+
+  .menu__dots {
+    grid-column-gap: 3.5vw;
+    margin-left: -7vw;
+  }
+
+  .menu__dot {
+    width: .4rem;
+    height: .4rem;
+  }
+
+  .menu__dot--big {
+    width: 1rem;
+    height: 1rem;
+    border-width: 3px;
+  }
+
+  .menu__dot--big.current {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .menu__titles {
+    width: 94%;
+    grid-column-gap: 9vw;
+    grid-row-gap: 9vw;
+    white-space: nowrap;
+    padding-left: 10%;
+  }
+
+  .menu__title.about {
+    font-size: .7rem;
   }
 }
 
