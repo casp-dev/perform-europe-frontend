@@ -619,6 +619,19 @@
         let smoother = ScrollSmoother.create({
             smooth: 1.5
         });
+        smoother.effects(".card-wrp", {speed: 0.9, lag: 0});
+        smoother.effects(".l__img.bottom-left", {speed: 0.95, lag: 0});
+        smoother.effects(".l__img.bottom-right", {speed: 0.98, lag: 0});
+        smoother.effects(".l__img.top-right", {speed: 1.09, lag: 0});
+                gsap.to(".marquee__txt", {
+                        marginLeft: "-30vw", 
+                        scrollTrigger: {
+                            trigger: ".marquee__txt", // Element that triggers the animation
+                            start: "top bottom", // Start the animation when the top of the trigger element hits the center of the viewport
+                            end: "bottom top", // End the animation when the bottom of the trigger element hits the center of the viewport
+                            scrub: 1, // Enables scrubbing for smooth scrolling
+                        },
+                    });
 
         // Init Carousel Effect -->
 

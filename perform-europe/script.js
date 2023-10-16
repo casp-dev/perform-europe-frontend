@@ -1,6 +1,75 @@
-$(document).ready(function () {
-    $(".w-webflow-badge").removeClass("w-webflow-badge").empty();
-});
+                // Create a new element (e.g., a <div>)
+                var productionElement = $(
+                    '<div class="form__itm__complex__input second">' +
+                    '   <div class="form__itm-i --25">' +
+                    '       <div class="form__txt-i">Production name</div>' +
+                    '       <input class="form__input" type="text" placeholder="">' +
+                    '       <div class="form__required">*</div>' +
+                    '   </div>' +
+                    '   <div class="form__itm--top">' +
+                    '       <div class="form__itm-i --top">' +
+                    '           <div class="form__txt-i">Type your text here (max. 280 characters)</div>' +
+                    '           <textarea class="form__input__area" rows="4" placeholder="" type="text" placeholder=""></textarea>' +
+                    '           <div class="form__required">*</div>' +
+                    '       </div>' +
+                    '   </div>' +
+                    '   <div class="btn-transparent--dark add-production">' +
+                    '       <div class="txt-block--1rem">+ add production</div>' +
+                    '   </div>' +
+                    '   <div class="btn-remove remove-element">' +
+                    '       <div class="txt-block--1rem">- remove</div>' +
+                    '   </div>' +
+                    '</div>'
+                );
+                var touringElement = $(
+                    '<div class="form__itm__complex__input second">' +
+                    '   <div class="form__itm-i --25">' +
+                    '       <div class="form__txt-i">Production name</div>' +
+                    '       <input class="form__input" type="text" placeholder="">' +
+                    '       <div class="form__required">*</div>' +
+                    '   </div>' +
+                    '   <div class="form__itm--top">' +
+                    '       <div class="form__itm-i --top">' +
+                    '           <div class="form__txt-i">Type your text here (max. 280 characters)</div>' +
+                    '           <textarea class="form__input__area" rows="4" placeholder="" type="text" placeholder=""></textarea>' +
+                    '           <div class="form__required">*</div>' +
+                    '       </div>' +
+                    '   </div>' +
+                    '   <div class="btn-transparent--dark add-touring">' +
+                    '       <div class="txt-block--1rem">+ add production</div>' +
+                    '   </div>' +
+                    '   <div class="btn-remove remove-element">' +
+                    '       <div class="txt-block--1rem">- remove</div>' +
+                    '   </div>' +
+                    '</div>'
+                );
+
+                // Click event handler for the button
+                $(".add-production").click(function () {
+                    // Add the new element to the parent element
+                    $("#production-wrp").append(productionElement);
+                });
+                $(".add-touring").click(function () {
+                    // Add the new element to the parent element
+                    $("#touring-wrp").append(touringElement);
+                });
+
+                // Click event handler for removing the added element
+                productionElement.find(".remove-element").click(function () {
+                    productionElement.remove();
+                });
+                touringElement.find(".remove-element").click(function () {
+                    touringElement.remove();
+                });
+
+                $("#touring-wrp").on("click", ".remove-element", function() {
+                    $(this).closest(".form__itm__complex__input.second").remove();
+                });
+                $("#production-wrp").on("click", ".remove-element", function() {
+                    $(this).closest(".form__itm__complex__input.second").remove();
+                });
+
+
 $('#menu-open').on('click', function () {
     $('.menu--dark').addClass('open');
     $('.menu').addClass('open');

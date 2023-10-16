@@ -188,16 +188,22 @@
                                 <div class="form__txt--small">This is the email I want to receive the notifications to.*
                                 </div>
                             </div>
-                            <div class="form__itm">
-                                <input class="form__input" type="email" placeholder="Confirm Email">
+
+                            <div class="form__itm-i">
+                                <div class="form__txt-i">Confirm Email</div>
+                                <input class="form__input" type="email" placeholder="">
                                 <div class="form__required">*</div>
                             </div>
-                            <div class="form__itm">
-                                <input class="form__input" type="text" placeholder="Password">
+
+                            <div class="form__itm-i">
+                                <div class="form__txt-i">Password</div>
+                                <input class="form__input" type="text" placeholder="">
                                 <div class="form__required">*</div>
                             </div>
-                            <div class="form__itm">
-                                <input class="form__input" type="text" placeholder="Confirm Password">
+
+                            <div class="form__itm-i">
+                                <div class="form__txt-i">Confirm Password</div>
+                                <input class="form__input" type="text" placeholder="">
                                 <div class="form__required">*</div>
                             </div>
                         </div>
@@ -227,8 +233,9 @@
                                   </select>
                                 <div class="form__required">*</div>
                             </div>
-                            <div class="form__itm">
-                                <input class="form__input" type="text" placeholder="Organization name">
+                            <div class="form__itm-i">
+                                <div class="form__txt-i">Organization name</div>
+                                <input class="form__input" type="text" placeholder="">
                                 <div class="form__required">*</div>
                             </div>
                             <div class="form__itm">
@@ -238,8 +245,9 @@
                                   </select>
                                 <div class="form__required">*</div>
                             </div>
-                            <div class="form__itm">
-                                <input class="form__input" type="text" placeholder="Your city">
+                            <div class="form__itm-i">
+                                <div class="form__txt-i">Your City</div>
+                                <input class="form__input" type="text" placeholder="">
                                 <div class="form__required">*</div>
                             </div>
                             <div class="form__subtitle--margin">Short description</div>
@@ -253,8 +261,11 @@
                                         inclusive.</div>
                                 </div>
                                 <div class="form__itm--top">
-                                    <textarea class="form__input__area" rows="4" placeholder="Type your text here"></textarea>
+                                    <div class="form__itm-i --top">
+                                    <div class="form__txt-i">Type your text here</div>
+                                    <textarea class="form__input__area" rows="4" placeholder="" type="text" placeholder=""></textarea>
                                     <div class="form__required">*</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form__itm__large">
@@ -265,8 +276,11 @@
                                         Slovenia.</div>
                                 </div>
                                 <div class="form__itm--top">
-                                    <textarea class="form__input__area" rows="4" placeholder="Type your text here (max. 280 characters)"></textarea>
+                                    <div class="form__itm-i --top">
+                                    <div class="form__txt-i">Type your text here</div>
+                                    <textarea class="form__input__area" rows="4" placeholder="" type="text" placeholder=""></textarea>
                                     <div class="form__required">*</div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form__itm__large">
@@ -278,8 +292,11 @@
                                         similar values.</div>
                                 </div>
                                 <div class="form__itm--top">
-                                    <textarea class="form__input__area" rows="4" placeholder="Type your text here (max. 280 characters)"></textarea>
+                                    <div class="form__itm-i --top">
+                                    <div class="form__txt-i">Type your text here</div>
+                                    <textarea class="form__input__area" rows="4" placeholder="" type="text" placeholder=""></textarea>
                                     <div class="form__required">*</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -403,17 +420,24 @@
                                 <div class="form__itm__complex-cont">
                                     <p class="paragraph--15rem">List and describe your productions that you want to list
                                         in your Perform Europe profile.</p>
-                                    <div class="form__itm__complex__input">
-                                        <div class="form__itm--25rem">
-                                            <input class="form__input" type="text" placeholder="Production name">
-                                            <div class="form__required">*</div>
+                                    <div id="production-wrp" class="itm__complex__wrp">
+                                        <div class="form__itm__complex__input">
+                                            <div class="form__itm-i --25">
+                                                <div class="form__txt-i">Production name</div>
+                                                <input class="form__input" type="text" placeholder="">
+                                                <div class="form__required">*</div>
+                                            </div>
+                                            <div class="form__itm--top">
+                                                <div class="form__itm-i --top">
+                                                <div class="form__txt-i">Type your text here</div>
+                                                <textarea class="form__input__area" rows="4" placeholder="" type="text" placeholder=""></textarea>
+                                                <div class="form__required">*</div>
+                                                </div>
+                                            </div>
+                                            <div href="" class="btn-transparent--dark w-inline-block add-production">
+                                                <div class="txt-block--1rem">+ add production</div>
+                                            </div>
                                         </div>
-                                        <div class="form__itm--top">
-                                            <textarea class="form__input__area" rows="4" placeholder="Type your text here (max. 280 characters)"></textarea>
-                                            <div class="form__required">*</div>
-                                        </div><a href="#" class="btn-transparent--dark w-inline-block">
-                                            <div class="txt-block--1rem">+ add production</div>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -422,21 +446,28 @@
                                     <div class="check-box is--checked"></div>
                                     <div class="form__txt--small">Touring opportunities</div>
                                 </div>
+                                
                                 <div class="form__itm__complex-cont">
                                     <p class="paragraph--15rem">List and describe the touring opportunities you want to
                                         list in your Perform Europe profile. These can be a venue, a residency, a
                                         festival etc.</p>
-                                    <div class="form__itm__complex__input">
-                                        <div class="form__itm--25rem">
-                                            <input class="form__input" type="text" placeholder="Production name">
-                                            <div class="form__required">*</div>
+                                    <div id="touring-wrp" class="itm__complex__wrp">
+                                        <div class="form__itm__complex__input">
+                                            <div class="form__itm-i --25">
+                                                <div class="form__txt-i">Production name</div>
+                                                <input class="form__input" type="text" placeholder="">
+                                                <div class="form__required">*</div>
+                                            </div>
+                                            <div class="form__itm--top">
+                                                <div class="form__itm-i --top">
+                                                <div class="form__txt-i">Type your text here</div>
+                                                <textarea class="form__input__area" rows="4" placeholder="" type="text" placeholder=""></textarea>
+                                                <div class="form__required">*</div>
+                                                </div>
+                                            </div><div href="" class="btn-transparent--dark w-inline-block add-touring">
+                                                <div id="add-touring" class="txt-block--1rem">+ add production</div>
+                                            </div>
                                         </div>
-                                        <div class="form__itm--top">
-                                            <textarea class="form__input__area" rows="4" placeholder="Type your text here (max. 280 characters)"></textarea>
-                                            <div class="form__required">*</div>
-                                        </div><a href="#" class="btn-transparent--dark w-inline-block">
-                                            <div class="txt-block--1rem">+ add venue</div>
-                                        </a>
                                     </div>
                                 </div>
                             </div>
