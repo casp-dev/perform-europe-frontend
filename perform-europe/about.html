@@ -1477,17 +1477,18 @@
         </footer>
     </main>
     </div>
-
-    <div class="site-menu"><a href="#" class="site-menu__link current">About Us</a>
-        <div class="link-wrp"><a href="#who-we-are" class="site-menu__link--sub">Who we are</a><a
-                href="#timeline" class="site-menu__link--sub">Timeline</a></div><a href="#teams"
-            class="site-menu__link">Teams</a>
-        <div class="link-wrp"><a href="#perform-europe-team" class="site-menu__link--sub">Perform Europe
-                Team</a><a href="#board-members" class="site-menu__link--sub">Board Members</a><a
-                href="#training-experts" class="site-menu__link--sub">Training Experts</a><a
-                href="#evaluations-experts" class="site-menu__link--sub">Evaluation Experts</a></div><a
-            href="#consortium-partners" class="site-menu__link">Consortium Partners</a>
-    </div>
+    <div class="site-menu">
+        <a href="#who-we-are" class="site-menu__link current">About Us</a>
+        <div class="link-wrp"><a href="#who-we-are" class="site-menu__link--sub">Who we are</a><a href="#timeline"
+                class="site-menu__link--sub">Timeline</a></div><a href="#teams" class="site-menu__link">Teams</a>
+        <div class="link-wrp"><a href="#perform-europe-team" class="site-menu__link--sub">Perform Europe Team</a><a
+                href="#board-members" class="site-menu__link--sub">Board Members</a><a href="#training-experts"
+                class="site-menu__link--sub">Training Experts</a><a href="#evaluation-experts"
+                class="site-menu__link--sub">Evaluation Experts</a></div><a href="#consortium-partners"
+            class="site-menu__link">Consortium Partners</a><img
+            src="https://assets-global.website-files.com/64ecbdf64d19097aeaa7b60d/652fec9b4b55a603d3ed4c54_pe-about-menu.svg"
+            loading="lazy" alt="" class="menu__small-img">
+    </div> 
     <div class="side-menu--mobile">
         <div class="menu__titles">
             <div class="menu__title about">about</div>
@@ -1550,6 +1551,7 @@
       let smoother = ScrollSmoother.create({
       smooth: 1.5
       });
+      smoother.effects(".land__img", {speed: 0.85, lag: 0});
       </script>
 
 </body>

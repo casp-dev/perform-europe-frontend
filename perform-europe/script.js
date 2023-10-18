@@ -356,6 +356,37 @@ $(".landing-img-wrp").each(function (index) {
 }});
   });
 
+  $(".site-menu").each(function (index) { 
+    $(document).ready(function() {
+    if ($(window).width() > 768) {
+    // Function to add class when scrolled down 50vh
+    function addClassOnScroll() {
+        var scrollPosition = $(window).scrollTop();
+        var windowHeight = $(window).height();
+
+        // Check if the element does not have the class "open"
+        if (!$('.fixed__filter-menu').hasClass('open')) {
+            if (scrollPosition >= (0.9 * windowHeight)) {
+                $('.site-menu').addClass('shrinked');
+                $('.menu__small-img').addClass('active');
+            } else {
+                $('.site-menu').removeClass('shrinked');
+                $('.menu__small-img').removeClass('active');
+            }
+        }
+    }
+
+    // Attach the scroll event listener
+    $(window).on('scroll', addClassOnScroll);
+    }});
+
+    $('.menu__small-img').on('click', function() {
+        $('.site-menu').removeClass('shrinked');
+        $('.menu__small-img').removeClass('active');
+      });
+
+  });
+
 
 
 
