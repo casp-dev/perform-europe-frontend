@@ -4950,7 +4950,7 @@ a {
 }
 
 .fixed__cta {
-  z-index: 20;
+  z-index: 19;
   grid-column-gap: 1rem;
   color: #fff;
   background-color: #00f;
