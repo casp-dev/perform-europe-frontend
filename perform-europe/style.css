@@ -25,6 +25,25 @@
   border-style:solid;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+/*width*/
+.partners__slider::-webkit-scrollbar {
+  display: block;
+  height: 1px;
+}
+/*track*/
+.partners__slider::-webkit-scrollbar-track {
+  background:rgba(255, 255, 255, 0.5);
+}
+/*thumb*/
+.partners__slider::-webkit-scrollbar-thumb {
+  background:rgb(255, 255, 255);
+  border-style:solid;
+}
+
 /*width*/
 .productions__slider::-webkit-scrollbar {
   display: block;
@@ -2618,6 +2637,7 @@ a {
 
 .section-wrp.s-project-partners {
   padding: 1.5rem 1.5rem 6rem;
+ padding-right: 0rem;
 }
 
 .section-wrp.s-about-who {
@@ -3822,16 +3842,17 @@ a {
 
 .partners__slider {
   width: auto;
-  height: 7.5rem;
+  height: 8.5rem;
   grid-column-gap: 1.5rem;
-  flex-wrap: wrap;
-  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   display: flex;
   position: relative;
+  flex-wrap: nowrap;
+  overflow: auto;
 }
 
 .p__slider__itm {
-  width: 15rem;
+  min-width: 15rem;
   height: 7.5rem;
   grid-row-gap: .5rem;
   color: #fff;
@@ -3889,8 +3910,6 @@ a {
 .partners__slider-wrp {
   width: 100%;
   height: 7.5rem;
-  margin-left: -1.5rem;
-  overflow: hidden;
 }
 
 .productions__slider-wrp {
@@ -4574,6 +4593,7 @@ a {
 }
 
 .btn--big {
+  line-height: 100%;
   width: 20rem;
   max-width: 100%;
   color: #000;
@@ -6027,13 +6047,14 @@ color: var(--magenta-color);
 .profile__img--large {
   z-index: -2;
   width: 100%;
-  height: 100%;
+  height: 112%;
   object-fit: cover;
   position: absolute;
   top: 0%;
   bottom: 0%;
   left: 0%;
   right: 0%;
+  margin-top: -5%;
 }
 
 .profile__gradient {
