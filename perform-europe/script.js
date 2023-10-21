@@ -1,4 +1,51 @@
-                // Create a new element (e.g., a <div>)
+    // Intro Animation -->
+    $(".loading-wrp").each(function (index) { 
+    
+        if ($(window).width() > 768) {
+            window.onload = function () {
+                // Check if the animation has been played before
+                if (sessionStorage.getItem("animationPlayed") !== 'true') {
+                    // Define your animation code here
+                    $('.loading-wrp').css('display', 'flex');  
+                    let tlIntroAll = gsap.timeline({ paused: true });
+                    tlIntroAll.to('.loading__cont-wrp', { width: "27rem", duration: .8, ease: "power2.inOut"}, 0);
+                    tlIntroAll.to('.loading__cont-wrp', { width: "36rem", duration: .8, ease: "power2.inOut"}, .8);
+                    tlIntroAll.to('.loading__cont-wrp', { width: "41rem", duration: .8, ease: "power2.inOut"}, 1.6);
+            
+                    tlIntroAll.to('.l__txt--s', { opacity: 1, duration: .6, ease: "power2.inOut", stagger: { amount: 1.5,} }, 0.1);
+            
+                    tlIntroAll.to('.l__txt--xl', { yPercent: 200, opacity: 0.5, duration: 0.6, ease: "power2.in"}, 2.6);
+                    tlIntroAll.to('.l__txt--s', { yPercent: 200, opacity: 0.5, duration: 0.6, ease: "power2.in", stagger: { amount: 0.1,} }, 2.7);
+                    tlIntroAll.to('.loading-wrp', { opacity: 0, duration: .8, ease: "power2.inOut"}, 3.2);
+            
+                  $(document).ready(function () {
+                   setTimeout(function (){
+                    tlIntroAll.restart();      
+                    }, 500);
+                    setTimeout(function (){
+                        $('.loading__cont-wrp').css('overflow', 'hidden');      
+                        }, 2800);
+                    setTimeout(function (){
+                        $('.loading-wrp').css('display', 'none');      
+                        }, 4500);
+                 });
+            
+                    // Set the flag in sessionStorage to indicate the animation has been played
+                    sessionStorage.setItem("animationPlayed", 'true');
+                }
+            }
+            
+            $('.loading-wrp').css('display', 'none');  
+    
+           
+        }
+    });             
+               
+               
+               
+               
+               
+               // Create a new element (e.g., a <div>)
                 var productionElement = $(
                     '<div class="form__itm__complex__input second">' +
                     '   <div class="form__itm-i --25">' +
@@ -389,25 +436,24 @@ $(".landing-img-wrp").each(function (index) {
 
 
   // Menu Animation -->
-
   let typeSplit = new SplitType('.txt--4rem', {
-          types: 'lines',
-          tagName: 'span'
-  })
-  const text = new SplitType('.menu__link', {
-          types: 'lines',
-          tagName: 'span'
-  })
+    types: 'lines',
+    tagName: 'span'
+})
+const text = new SplitType('.menu__link', {
+    types: 'lines',
+    tagName: 'span'
+})
 
 
-      let tlMenu = gsap.timeline({ paused: true });
-      tlMenu.from('.line', { yPercent: 120, duration: 0.6, ease: "power2.out", stagger: { amount: 0.6, } });
-      tlMenu.from('.menu__link__line', { width: 0, duration: 0.4, ease: "power2.out", stagger: { amount: 0.8, } }, 0);
-      tlMenu.fromTo('.menu__sub-img', { opacity: 0, height: "0rem"}, { opacity: 1, height: "10rem", duration: 0.3}, 0.5);
+let tlMenu = gsap.timeline({ paused: true });
+tlMenu.from('.line', { yPercent: 120, duration: 0.6, ease: "power2.out", stagger: { amount: 0.6, } });
+tlMenu.from('.menu__link__line', { width: 0, duration: 0.4, ease: "power2.out", stagger: { amount: 0.8, } }, 0);
+tlMenu.fromTo('.menu__sub-img', { opacity: 0, height: "0rem"}, { opacity: 1, height: "10rem", duration: 0.3}, 0.6);
+tlMenu.fromTo('.menu', { opacity: 0,}, { opacity: 1, duration: 0.3}, 0);
 
 
-      $("#menu-open").on("click", function () {
-          tlMenu.restart();
-      });
-
+$("#menu-open").on("click", function () {
+    tlMenu.restart();
+});
 

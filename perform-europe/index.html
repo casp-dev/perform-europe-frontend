@@ -656,6 +656,28 @@
             // other parameters
         });
     </script>
+    <script>
+
+  // Intro Animation -->
+
+  $(document).ready(function() {
+    if ($(window).width() > 768) {
+
+        let tlIntro = gsap.timeline({ paused: true });
+        tlIntro.from('.overlay-wrp', { yPercent: -110, duration: 0.9, ease: "power2.out"}, 0.9);
+        tlIntro.from('.overlay-cont', { opacity: 0, duration: .8, ease: "power2.out"}, 1.65);
+        tlIntro.from('.l__img', { opacity: 0, height: 0, duration: .8, ease: "power2.out", stagger: { amount: 0.7, from: "random", ease: "power1.out"} }, 0);
+        tlIntro.fromTo('.section-wrp.s-card', { y: "10vh", duration: 1, ease: "power2.out" }, { y: "0vh", duration: .8, ease: "power2.out"}, 1.6);
+
+      $(document).ready(function () {
+       setTimeout(function (){
+        tlIntro.restart();      
+        }, 500);
+     });
+
+    }});
+
+    </script>
 </body>
 
 </html>
