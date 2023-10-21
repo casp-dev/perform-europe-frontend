@@ -388,5 +388,26 @@ $(".landing-img-wrp").each(function (index) {
   });
 
 
+  // Menu Animation -->
+
+  let typeSplit = new SplitType('.txt--4rem', {
+          types: 'lines',
+          tagName: 'span'
+  })
+  const text = new SplitType('.menu__link', {
+          types: 'lines',
+          tagName: 'span'
+  })
+
+
+      let tlMenu = gsap.timeline({ paused: true });
+      tlMenu.from('.line', { yPercent: 120, duration: 0.6, ease: "power2.out", stagger: { amount: 0.6, } });
+      tlMenu.from('.menu__link__line', { width: 0, duration: 0.4, ease: "power2.out", stagger: { amount: 0.8, } }, 0);
+      tlMenu.fromTo('.menu__sub-img', { opacity: 0, height: "0rem"}, { opacity: 1, height: "10rem", duration: 0.3}, 0.5);
+
+
+      $("#menu-open").on("click", function () {
+          tlMenu.restart();
+      });
 
 

@@ -2812,7 +2812,7 @@ a {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, .7);
-  padding-top: 8rem;
+  padding-top: 12rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   display: none;
@@ -3394,6 +3394,7 @@ a {
   font-size: 3vw;
   line-height: 120%;
   position: relative;
+  overflow: hidden;
 }
 .txt--4rem-slid {
   z-index: 2;
@@ -4846,6 +4847,7 @@ a {
   color: #fff;
   text-transform: uppercase;
   transition: color .2s;
+  overflow: hidden;
 }
 
 .menu__link:hover {
@@ -7054,6 +7056,9 @@ color: var(--magenta-color);
   top: 22rem;
 }
 @media screen and (max-width: 991px) {
+  .menu {
+    padding-top: 8rem;
+  }
   .section-wrp.s-selected {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
