@@ -1547,12 +1547,43 @@
       <script>
           
     // Init Scroolsmoother Effect -->
-
       gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
       let smoother = ScrollSmoother.create({
       smooth: 1.5
       });
       smoother.effects(".land__img", {speed: 0.85, lag: 0});
+
+
+
+      gsap.utils.toArray(".site-menu a").forEach(function (button, i) {
+                button.addEventListener("click", (e) => {
+                    var id = e.target.getAttribute("href");
+                    console.log(id);
+                    smoother.scrollTo(id, true, "top top");
+                    e.preventDefault();
+                });
+            });
+
+            // to view navigate to -  
+            window.onload = (event) => {
+                console.log("page is fully loaded");
+
+                let urlHash = window.location.href.split("#")[1];
+
+                let scrollElem = document.querySelector("#" + urlHash);
+
+                console.log(scrollElem, urlHash);
+
+                if (urlHash && scrollElem) {
+                    gsap.to(smoother, {
+                        scrollTop: smoother.offset(scrollElem, "top top"),
+                        duration: 1,
+                        delay: 0.5
+                    });
+                }
+            };
+
+
       </script>
 
 </body>
