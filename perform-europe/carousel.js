@@ -1,4 +1,4 @@
-import { S as e, A as r, N as s, P as t } from "https://carousel-slider.uiinitiative.com/assets/vendor.4dc0df41.js";
+import { S as e, A as r, N as s, P as t } from "/carousel-vendor.js";
 !(function () {
     const e = document.createElement("link").relList;
     if (!(e && e.supports && e.supports("modulepreload"))) {

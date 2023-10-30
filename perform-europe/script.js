@@ -32,6 +32,7 @@
             
                     // Set the flag in sessionStorage to indicate the animation has been played
                     sessionStorage.setItem("animationPlayed", 'true');
+                    sessionStorage.clear();
                 }
             }
             
@@ -457,3 +458,21 @@ $("#menu-open").on("click", function () {
     tlMenu.restart();
 });
 
+
+    // slider-bar Animation -->
+    $(".partners__slider").each(function (index) { 
+    
+        $('.partners__slider').on('mouseenter', function() {
+            $(this).css('.partners__slider::-webkit-scrollbar', '10px');
+          });
+
+          $('.partners__slider').hover(
+            function () {
+              $(this).css('width', '400px'); // Change the width on hover
+            },
+            function () {
+              $(this).css('width', '300px'); // Restore the original width on mouse leave
+            }
+          );
+
+    });    

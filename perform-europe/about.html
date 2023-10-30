@@ -62,9 +62,9 @@
                                 </a>
                                 <div class="menu__link__line"></div>
                             </div>
-                            <div class="menu__sub-links"><a href="/about#who-we-are" class="menu__link">who we are</a><a
-                                    href="/about#timeline" class="menu__link">Timeline</a><a href="/about#teams"
-                                    class="menu__link">Teams</a><a href="/about#consortium-partners"
+                            <div class="menu__sub-links"><a href="#who-we-are" class="menu__link">who we are</a><a
+                                    href="#timeline" class="menu__link">Timeline</a><a href="#teams"
+                                    class="menu__link">Teams</a><a href="#consortium-partners"
                                     class="menu__link">Consortium partners</a></div>
                         </div>
                         <div class="menu-link-block">
@@ -1054,7 +1054,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="evaluations-experts" class="evaluation-experts">
+                <div id="evaluation-experts" class="evaluation-experts">
                     <div class="grid__head">
                         <div class="section__title-wrp">
                             <h2 class="section__title">Evaluation Experts</h2>
@@ -1564,6 +1564,15 @@
                 });
             });
 
+            gsap.utils.toArray(".menu__sub-links a").forEach(function (button, i) {
+                button.addEventListener("click", (e) => {
+                    var idm = e.target.getAttribute("href");
+                    console.log(idm);
+                    smoother.scrollTo(idm, true, "top top");
+                    e.preventDefault();
+                });
+            });
+
             // to view navigate to -  
             window.onload = (event) => {
                 console.log("page is fully loaded");
@@ -1578,12 +1587,12 @@
                     gsap.to(smoother, {
                         scrollTop: smoother.offset(scrollElem, "top top"),
                         duration: 1,
-                        delay: 0.5
+                        delay: 0
                     });
                 }
             };
 
-
+            
       </script>
 
 </body>
