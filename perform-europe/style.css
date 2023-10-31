@@ -32,16 +32,18 @@
 /*width*/
 .partners__slider::-webkit-scrollbar {
   display: block;
-  height: 1px;
+  height: 10px;
 }
 /*track*/
 .partners__slider::-webkit-scrollbar-track {
   background:rgba(255, 255, 255, 0.5);
+  max-width: 1px !important;
 }
 /*thumb*/
 .partners__slider::-webkit-scrollbar-thumb {
   background:rgb(255, 255, 255);
   border-style:solid;
+  max-height: 5px;
 }
 
 /*width*/
