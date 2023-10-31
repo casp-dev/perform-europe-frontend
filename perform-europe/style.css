@@ -2865,7 +2865,7 @@ a {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background-color: rgba(0, 0, 0, .7);
-  padding-top: 12rem;
+  padding-top: 10rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   display: none;
@@ -6376,6 +6376,7 @@ color: var(--magenta-color);
   align-items: center;
   display: flex;
   position: relative;
+  overflow: hidden;
 }
 
 .a__image__cont {
@@ -7070,7 +7071,7 @@ color: var(--magenta-color);
 .l__title-wrp {
   height: 2.5rem;
   min-height: 2.5rem;
-  position: absolute;
+  position: relative;
   overflow: hidden;
 }
 		

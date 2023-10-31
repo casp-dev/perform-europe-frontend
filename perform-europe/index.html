@@ -174,13 +174,13 @@
                 <div class="landing-img-wrp">
                     <div class="l__itm__titles">
                         <div class="l__title-wrp">
-                            <h3 class="l__title" id="title-gen">Gender-balanced</h3>
+                            <h3 class="l__title" id="title-gen">Innovative</h3>
                         </div>
                         <div class="l__title-wrp">
                             <h3 class="l__title" id="title-div">Diverse</h3>
                         </div>
                         <div class="l__title-wrp">
-                            <h3 class="l__title" id="title-inn">Innovative</h3>
+                            <h3 class="l__title" id="title-inn">Gender-balanced</h3>
                         </div>
                         <div class="l__title-wrp">
                             <h3 class="l__title" id="title-inc">Inclusive</h3>
@@ -190,6 +190,9 @@
                         </div>
                         <div class="l__title-wrp">
                             <h3 class="l__title" id="title-acc">Accessible</h3>
+                        </div>
+                        <div class="l__title-wrp">
+                            <h3 class="l__title" id="title-acc">Innovative</h3>
                         </div>
                     </div>
 
@@ -690,6 +693,19 @@
 
             }
         });
+
+    </script>
+
+    <script>
+
+let tlMT = gsap.timeline({ repeat: -1, defaults: { ease: "expo.inOut", duration: 1, delay: 0.5 } });
+tlMT.to(".l__title-wrp", { yPercent: -100 });
+tlMT.to(".l__title-wrp", { yPercent: -200 });
+tlMT.to(".l__title-wrp", { yPercent: -300 });
+tlMT.to(".l__title-wrp", { yPercent: -400 });
+tlMT.to(".l__title-wrp", { yPercent: -500 });
+tlMT.to(".l__title-wrp", { yPercent: -600 });
+
 
     </script>
 </body>
