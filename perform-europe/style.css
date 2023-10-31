@@ -13,7 +13,7 @@
 /*width*/
 .itms__grid::-webkit-scrollbar {
   display: block;
-  height: 1px;
+  height: 5px;
 }
 /*track*/
 .itms__grid::-webkit-scrollbar-track {
@@ -23,6 +23,7 @@
 .itms__grid::-webkit-scrollbar-thumb {
   background:rgb(255, 255, 255);
   border-style:solid;
+  border-radius: 8px;
 }
 
 ::-webkit-scrollbar {
@@ -32,24 +33,23 @@
 /*width*/
 .partners__slider::-webkit-scrollbar {
   display: block;
-  height: 10px;
+  height: 5px;
 }
 /*track*/
 .partners__slider::-webkit-scrollbar-track {
   background:rgba(255, 255, 255, 0.5);
-  max-width: 1px !important;
 }
 /*thumb*/
 .partners__slider::-webkit-scrollbar-thumb {
   background:rgb(255, 255, 255);
   border-style:solid;
-  max-height: 5px;
+  border-radius: 8px;
 }
 
 /*width*/
 .productions__slider::-webkit-scrollbar {
   display: block;
-  height: 1px;
+  height: 5px;
 }
 /*track*/
 .productions__slider::-webkit-scrollbar-track {
@@ -59,12 +59,13 @@
 .productions__slider::-webkit-scrollbar-thumb {
   background:rgb(255, 255, 255);
   border-style:solid;
+  border-radius: 8px;
 }
 
 /*width*/
 .p-slider::-webkit-scrollbar {
   display: block;
-  height: 1px;
+  height: 5px;
 }
 /*track*/
 .p-slider::-webkit-scrollbar-track {
@@ -74,6 +75,7 @@
 .p-slider::-webkit-scrollbar-thumb {
   background:rgb(0, 0, 0);
   border-style:solid;
+  border-radius: 8px;
 }  
 
 .fixed__filter-menu.shrinked {
